@@ -1,0 +1,17 @@
+<div style="margin-left: 10%;">
+    <br />
+    <h1> <u>Divi Work</u> </h1> <br /><br /><br /><br /><br />
+    <hr />
+
+    <form>
+        Enter Number<br>
+        <input type="text" [disabled]="status" #z />
+        <br>
+
+
+        <input type="button" (click)="doThis(z.value)" value="printDivi" />
+        <br />First divisior :-{{div1}}
+        <br />Second divisior :-{{div2}}
+
+    </form>
+</div>

@@ -1,0 +1,17 @@
+<div style="margin-left: 10%;">
+    <br />
+    <h1> <u>Addition Work</u> </h1> <br /><br /><br /><br /><br />
+    <hr />
+
+    <form>
+        Enter Fist Number<br>
+        <input type="text" [disabled]="status" #x />
+        <br>
+        Enter Second Number<br>
+        <input type="text" [disabled]="status" #y />
+
+
+        <input type="button" (click)="doThis(x.value,y.value)" value="Add" />
+        <br />Sum is :-{{sum}}
+    </form>
+</div>

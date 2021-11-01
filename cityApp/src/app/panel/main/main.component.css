@@ -1,0 +1,54 @@
+.mainPanelStyle{
+
+    width: 100%;
+    height: 100%;
+    border-color:#a10b5e;
+    border-style: double;
+    border-width: 3px;
+    background-color: #49b14e;
+}
+h1{
+    margin-left: 30%;
+    width: 100%;
+    height: 10%;
+    color: rgb(15, 58, 3);
+    font-size: 50px;
+    font-style: normal;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3,h1{
+    margin-right: 80%;
+    font-style:italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+h2{
+    margin-left: 45%;
+    
+}
+
+.mainSubPanel{
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+input[type=text] {
+    
+    size: 30;
+    height: 30px;
+    color:#1A1816;
+    font-size: medium;
+    font-style: italic;
+}
+
+.tableovr{
+    width: 90%;
+    height: 90%;
+    font-weight:bold;
+    color: rgb(250, 4, 78);
+    font-size:larger; 
+}

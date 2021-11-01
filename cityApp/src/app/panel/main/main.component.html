@@ -1,0 +1,83 @@
+<div>
+    <p>A: {{a | currency}}</p>
+</div>
+<div class="mainPanelStyle" style="background-image: url('assets/back.jpg');">
+    <div style="background-color: rgb(168, 125, 60);"> <h1>Package Tour App</h1> </div> 
+    <div class="mainSubPanel">
+        Package Name <input type="text" (keypress)=" emptyArr()" name="search" [(ngModel)]="searchText"  placeholder="Enter here" [disabled]="status"/>
+    </div>
+    <hr/>
+    <table class="tableovr">
+        <tr>
+            <th ><h3>Selection</h3> </th>
+            <th ><h3>Package Name</h3> </th>
+            <th> <h3>No of Days</h3></th>
+            <div>
+                <th><h3> Cost</h3></th>
+                <table>
+                    <tr> 
+                        <td style="color: green;" (click)="sortDataAsc()">
+                            <label ><img src={{upimg}} width="20px" /></label>
+                        </td>
+                        <td style="color: rgb(189, 25, 25);" (click)="sortDataDsc()">
+                        &nbsp;&nbsp;&nbsp;<label ><img src={{downimg}} width="20px" /></label> 
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <th> <h3>Discount</h3></th>
+            
+        </tr>
+        <tr *ngFor="let pkg of pkgArr | filter:searchText" >
+            <td> <input type="checkbox"  (click)="addPackage(pkg)"/> 
+                <label ><img src={{pkg.imgatr}} width="150px" /></label>
+            </td>
+            <td> {{pkg.packageName}} </td>
+            <td> {{pkg.days}} </td>
+            <td> {{pkg.cost}} </td>
+            <td> {{pkg.discount}} %</td>
+          
+        </tr>
+    </table>
+    <br>
+    <br>
+    <input style="background-color: sienna; width: 150px; height: 50px;font-size: large;" type="button" (click)="doThis()" value="Compare"/>
+
+    <hr/>
+    <div style="background-color: royalblue;"><h2>Comparision Details</h2></div>
+    
+    <table *ngIf="print && count==2" class="tableovr">
+        <tr>
+            <th>Attribute</th>
+            <td>Package A</td>
+            <td>Package B</td>
+        </tr>
+        <hr>
+        <tr>
+            <th>Package Name</th>
+            <td>{{tmpArr[0].packageName}}</td>
+            <td>{{tmpArr[1].packageName}}</td>
+        </tr>
+        <tr>
+            <th>Days</th>
+            <td>{{tmpArr[0].days}}</td>
+            <td>{{tmpArr[1].days}}</td>
+        </tr>
+        <tr>
+            <th>Cost</th>
+            <td>{{tmpArr[0].cost}}</td>
+            <td>{{tmpArr[1].cost}}</td>
+        </tr>
+        <tr>
+            <th>Review</th>
+            <td>{{tmpArr[0].review}}</td>
+            <td>{{tmpArr[1].review}}</td>
+        </tr>
+        <tr>
+            <th>Discount</th>
+            <td>{{tmpArr[0].discount}} %</td>
+            <td>{{tmpArr[1].discount}} %</td>
+        </tr>
+    </table>
+</div>
